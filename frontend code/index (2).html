@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Prediction</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body class="c1" >
+    <div class="c2">
+        <div class="container">
+            <h2>Water Quality Prediction Result</h2>
+            <p>Predicted Water Quality: {{ prediction }}</p>
+        </div>
+
+        <div class="container2" align="center">
+            <h2>Water Quality Prediction</h2>
+            <form name="form" id="waterQualityForm" method="post" action="{{ url_for('predict') }}">
+                <label for="ph">pH Value:</label>
+                <input type="number" id="ph" name="ph" step="0.00000001" required><br><br>
+
+                <label for="hardness">Hardness:</label>
+                <input type="number" id="hardness" name="hardness" step="0.00000001" required><br><br>
+
+                <label for="solids">Solids:</label>
+                <input type="number" id="solids" name="solids" step="0.00000001" required><br><br>
+
+                <label for="chloramines">Chloramines:</label>
+                <input type="number" id="chloramines" name="chloramines" step="0.00000001" required><br><br>
+
+                <label for="sulfates">Sulfates:</label>
+                <input type="number" id="sulfates" name="sulfates" step="0.00000001" required><br><br>
+
+                <label for="conductivity">Electric Conductivity:</label>
+                <input type="number" id="conductivity" name="conductivity" step="0.00000001" required><br><br>
+
+                <label for="organic_carbon">Organic Carbon:</label>
+                <input type="number" id="organic_carbon" name="organic_carbon" step="0.00000001" required><br><br>
+
+                <label for="trihalomethanes">Trihalomethanes:</label>
+                <input type="number" id="trihalomethanes" name="trihalomethanes" step="0.00000001" required><br><br>
+
+                <label for="turbidity">Turbidity:</label>
+                <input type="number" id="turbidity" name="turbidity" step="0.00000001" required><br><br>
+
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
